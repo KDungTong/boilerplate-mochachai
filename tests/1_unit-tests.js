@@ -107,7 +107,7 @@ suite('Unit Tests', function () {
     test('#isString, #isNotString', function () {
       assert.isNotString(Math.sin(Math.PI / 4), 'A float is not a string');
       assert.isString(process.env.PATH, 'An env variable is a string (or undefined)');
-      assert.isString (JSON.stringify({ type: 'object' }), 'JSON is a string');
+      assert.isString(JSON.stringify({ type: 'object' }), 'JSON is a string');
     });
     // #14
     test('String #include, #notInclude', function () {
@@ -149,8 +149,8 @@ suite('Unit Tests', function () {
     });
     // #17
     test('#typeOf, #notTypeOf', function () {
-      assert.notTypeOf(myCar, 'object');
-      assert.notTypeOf(myCar.model, 'string');
+      assert.typeOf(myCar, 'object');
+      assert.typeOf(myCar.model, 'string');
       assert.notTypeOf(airlinePlane.wings, 'string');
       assert.typeOf(airlinePlane.engines, 'array');
       assert.typeOf(myCar.wheels, 'number');
